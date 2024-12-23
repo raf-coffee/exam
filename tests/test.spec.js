@@ -2,7 +2,7 @@
 
 import { test, expect } from '@playwright/test';
 
-test('step 1', async ({ page }) => {
+test('step1', async ({ page }) => {
   await page.goto('http://localhost:8070', {
     waitUntil: 'domcontentloaded',
   });
@@ -12,7 +12,7 @@ test('step 1', async ({ page }) => {
   await expect(headerTdCount).toBe(6);
 });
 
-test('step 2', async ({ page }) => {
+test('step2', async ({ page }) => {
   await page.goto('http://localhost:8070', {
     waitUntil: 'domcontentloaded',
   });
@@ -27,14 +27,14 @@ test('step 2', async ({ page }) => {
   await expect(firstRowCell).toBe('4');
 });
 
-test('step 3', async ({ page }) => {
+test('step3', async ({ page }) => {
   await page.goto('http://localhost:8070', {
     waitUntil: 'domcontentloaded',
   });
   await expect(page.getByRole('button', { name: 'Sort' })).toBeVisible();
 });
 
-test('step 4', async ({ page }) => {
+test('step4', async ({ page }) => {
   await page.goto('http://localhost:8070', {
     waitUntil: 'domcontentloaded',
   });
